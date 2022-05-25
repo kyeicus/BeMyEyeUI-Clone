@@ -8,19 +8,24 @@
 import SwiftUI
 
 struct CommunityView: View {
+    
+    @State private var isLoading = false
     var body: some View {
-        
-        VStack{
+        ZStack{
+            Color(.systemBackground)
+                .ignoresSafeArea()
+            Text("")
             
-            ScrollView( showsIndicators: true) {
-                HStack {
-                    Image(systemName: "house")
-                    Image(systemName: "house")
-                    Image(systemName: "house")
-                    Image(systemName: "house")
-                    Image(systemName: "house")
-                }.font(Font.system(size: 70))
+            if isLoading{
+                LoadingView()
             }
+        }
+        .onAppear { startNetworCall() }
+    }
+    func startNetworCall() {
+        isLoading = true
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            isLoading = false
         }
     }
 }
@@ -28,5 +33,18 @@ struct CommunityView: View {
 struct CommunityView_Previews: PreviewProvider {
     static var previews: some View {
         CommunityView()
+    }
+}
+
+struct LoadingView: View {
+    var body: some View {
+        ZStack {
+            Color(.systemBackground)
+                .ignoresSafeArea()
+            
+            ProgressView()
+                .progressViewStyle(CircularProgressViewStyle())
+                .scaleEffect()
+        }
     }
 }

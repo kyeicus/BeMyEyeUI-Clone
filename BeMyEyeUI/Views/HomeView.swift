@@ -4,65 +4,78 @@
 //
 //  Created by Emmanuel K. Nketia on 4/13/22.
 //
-
 import SwiftUI
 
 struct HomeView: View {
     var body: some View {
-        VStack {
-            Form {
+        Form {
+            VStack(alignment: .center) {
                 VStack {
+                    Image(systemName: "globe.americas.fill")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .foregroundColor(Color.white)
+                        .clipped()
+                }.frame( height: 200)
+                HStack (alignment: .bottom){
                     VStack {
-                        Image(systemName: "globe.americas.fill")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.blue)
-                            .clipped()
-                        
-                    }.frame( height: 200)
-                    HStack (alignment: .bottom){
-                        VStack {
-                            Text("393,605")
-                            Text("Blind")
-                        }
-                        Spacer()
-                        Divider()
-                            .frame( height: 30)
-                        Spacer()
-                        VStack {
-                            Text("5,687,160")
-                            Text("Volunters")
-                        }
+                        Text("393,605")
+                        Text("Blind")
                     }
-                }.ignoresSafeArea(.all, edges: .all)
-                Section{
-                    VStack(alignment: .center, spacing: 5){
-                        
-                        Text("Emmanuel K. Nketia")
-                            .font(.headline.bold())
-                        
-                        Text("Member Since April 8, 2022")
-                        HStack {
-                            Button("English"){}
-                                .buttonStyle(.bordered)
-                            Button("+2"){}
-                                .buttonStyle(.bordered)
-                        }.background(.thickMaterial)
-                            .foregroundColor(.secondary)
+                    Spacer()
+                    Divider()
+                        .frame( height: 30)
+                    Spacer()
+                    VStack {
+                        Text("5,687,160")
+                        Text("Volunters")
                     }
                 }
-                .frame(width: 300 , alignment: .center)
-                Section{
-                    Text("You will receive a notification when someone needs your help.")
-                }
+                .foregroundColor(Color.white)
+            }
+            .background(
+                Rectangle()
+                    .fill(Color.blue)
+                    .frame(width: 380, height: 300, alignment: .center)
                 
-                VStack(alignment: .center, spacing: 10) {
-                    Button {
-                        print("Learn")
-                    } label: {
-                        Text("Learn to answer calls")
-                    }
+            )
+            .ignoresSafeArea(.all, edges: .all)
+            Section {
+                VStack(alignment: .center, spacing: 5){
+                    
+                    Text("Emmanuel K. Nketia")
+                        .font(.headline.bold())
+                    
+                    Text("Member Since April 8, 2022")
+                        .fontWeight(.thin)
+                    HStack {
+                        Button("English"){}
+                            .buttonStyle(.bordered)
+                        Button("+2"){}
+                            .buttonStyle(.bordered)
+                    }.background(.thickMaterial)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
                 }
+            }
+            .frame(width: 300 , alignment: .center)
+            Section {
+                Text("You will receive a notification when someone needs your help.")
+                    .frame(width: 320, height: 50, alignment: .center)
+            }
+            VStack {
+                Button ("Learn to answer calls") {
+                    print("Learn to answer calls")
+                }
+                .frame(width: 300, height: 20, alignment: .center)
+            }
+        }
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .principal) {
+                Image("logo")
+                    .resizable()
+                    .frame(width: 40, height: 40)
             }
         }
     }
