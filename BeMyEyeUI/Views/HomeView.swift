@@ -73,9 +73,12 @@ struct HomeView: View {
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
             ToolbarItem(placement: .principal) {
-                Image("logo")
+                Image("bemyeye-svg")
+                    .renderingMode(.template)
                     .resizable()
+                    .renderingMode(.none)
                     .frame(width: 40, height: 40)
+                   
             }
         }
     }
@@ -83,6 +86,7 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        ContentView()
+            .preferredColorScheme(.dark)
     }
 }

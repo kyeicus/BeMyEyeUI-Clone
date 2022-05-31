@@ -11,8 +11,7 @@ import SwiftUI
 struct BeMyEyeUIApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-            
+            MainScreenView()
         }
     }
 }

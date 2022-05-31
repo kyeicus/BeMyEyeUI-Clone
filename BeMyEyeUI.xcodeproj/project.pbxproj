@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		914F4C7E28464D3500652989 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F4C7D28464D3500652989 /* MainScreenView.swift */; };
+		914F4C802846677F00652989 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F4C7F2846677F00652989 /* RegisterView.swift */; };
+		914F4C8228466FF300652989 /* RegisterWithEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914F4C8128466FF300652989 /* RegisterWithEmailView.swift */; };
 		915ABD26280A0A98001DF175 /* CommunityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915ABD25280A0A98001DF175 /* CommunityView.swift */; };
 		91CE28152806306E00D4781B /* BeMyEyeUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE28142806306E00D4781B /* BeMyEyeUIApp.swift */; };
 		91CE28172806306E00D4781B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91CE28162806306E00D4781B /* ContentView.swift */; };
@@ -17,8 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		914F4C7D28464D3500652989 /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		914F4C7F2846677F00652989 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		914F4C8128466FF300652989 /* RegisterWithEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterWithEmailView.swift; sourceTree = "<group>"; };
 		915ABD25280A0A98001DF175 /* CommunityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityView.swift; sourceTree = "<group>"; };
-		91CE28112806306E00D4781B /* BeMyEyeUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeMyEyeUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		91CE28112806306E00D4781B /* Be My Eyes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Be My Eyes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91CE28142806306E00D4781B /* BeMyEyeUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeMyEyeUIApp.swift; sourceTree = "<group>"; };
 		91CE28162806306E00D4781B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		91CE28182806306F00D4781B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,9 +47,13 @@
 		915ABD242809F0C9001DF175 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				91CE28162806306E00D4781B /* ContentView.swift */,
 				91CE282228065D3A00D4781B /* HomeView.swift */,
 				91CE282428066E3800D4781B /* SettingsView.swift */,
 				915ABD25280A0A98001DF175 /* CommunityView.swift */,
+				914F4C7D28464D3500652989 /* MainScreenView.swift */,
+				914F4C7F2846677F00652989 /* RegisterView.swift */,
+				914F4C8128466FF300652989 /* RegisterWithEmailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -59,7 +69,7 @@
 		91CE28122806306E00D4781B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				91CE28112806306E00D4781B /* BeMyEyeUI.app */,
+				91CE28112806306E00D4781B /* Be My Eyes.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				91CE28142806306E00D4781B /* BeMyEyeUIApp.swift */,
-				91CE28162806306E00D4781B /* ContentView.swift */,
 				915ABD242809F0C9001DF175 /* Views */,
 				91CE28182806306F00D4781B /* Assets.xcassets */,
 				91CE281A2806306F00D4781B /* Preview Content */,
@@ -101,7 +110,7 @@
 			);
 			name = BeMyEyeUI;
 			productName = BeMyEyeUI;
-			productReference = 91CE28112806306E00D4781B /* BeMyEyeUI.app */;
+			productReference = 91CE28112806306E00D4781B /* Be My Eyes.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -155,7 +164,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				91CE282328065D3A00D4781B /* HomeView.swift in Sources */,
+				914F4C7E28464D3500652989 /* MainScreenView.swift in Sources */,
+				914F4C8228466FF300652989 /* RegisterWithEmailView.swift in Sources */,
 				91CE282528066E3800D4781B /* SettingsView.swift in Sources */,
+				914F4C802846677F00652989 /* RegisterView.swift in Sources */,
 				91CE28172806306E00D4781B /* ContentView.swift in Sources */,
 				915ABD26280A0A98001DF175 /* CommunityView.swift in Sources */,
 				91CE28152806306E00D4781B /* BeMyEyeUIApp.swift in Sources */,
@@ -284,6 +296,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeMyEyeUI/Preview Content\"";
@@ -293,6 +306,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -302,7 +316,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyeicus.BeMyEyeUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Be My Eyes";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -314,6 +328,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"BeMyEyeUI/Preview Content\"";
@@ -323,6 +338,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -332,7 +348,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.kyeicus.BeMyEyeUI;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Be My Eyes";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
