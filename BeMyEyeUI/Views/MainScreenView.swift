@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct MainScreenView: View {
+    @State private var apiShow = false
     var body: some View {
         NavigationView {
-            
             VStack {
                 Text ("Join the community. See the world together.")
                     .bold()
@@ -23,15 +23,14 @@ struct MainScreenView: View {
                 Spacer()
                 HStack {
                     VStack{
-                        Text("405,249")
+                        Text(apiShow ? "405,249" : "-")
                             .bold()
                         Text("Blind")
                             .font(.caption)
-                        
                     }
                     Spacer()
                     VStack{
-                        Text("5,761,181")
+                        Text(apiShow ? "5,761,181": "-")
                             .bold()
                         Text("Volunteers")
                             .font(.caption)
@@ -42,7 +41,6 @@ struct MainScreenView: View {
                 
                 VStack {
                     NavigationLink {
-                        RegisterView()
                     } label: {
                         VStack {
                             Text ("I need visual assistance")
@@ -56,8 +54,8 @@ struct MainScreenView: View {
                             RoundedRectangle(cornerRadius: 10, style: .continuous).fill())
                     } .padding(.vertical, 10)
                     
-                    Button  {
-                        print("help!!!")
+                    NavigationLink{
+                        RegisterView()
                     } label: {
                         VStack {
                             Text ("I need visual assistance")
@@ -73,15 +71,12 @@ struct MainScreenView: View {
                 }
                 .padding(.bottom, 2)
             }
-            .navigationTitle("Be My Eyes")
             .navigationBarTitleDisplayMode(.inline)
-//            .toolbar {
-//                ToolbarItem(placement: .principal) {
-//                    Text("Be My Eyes")
-//                }
-//            }
-            
-            
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    Text("Be My Eyes")
+                }
+            }
         }
     }
 }
