@@ -78,7 +78,6 @@ struct HomeView: View {
                     .resizable()
                     .renderingMode(.none)
                     .frame(width: 40, height: 40)
-                   
             }
         }
     }

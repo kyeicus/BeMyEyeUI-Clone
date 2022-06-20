@@ -39,17 +39,16 @@ struct SettingsView: View {
                 NavigationLink {
                     
                 } label: {
-                    
                     HStack{
                         Image(systemName: "checkmark.shield.fill")
                             .foregroundColor(.blue)
                             .font(Font.system(size: 30))
                         
-                        Text("Terms $ Privacy Policy")
+                        Text("Terms & Privacy Policy")
                     }
                 }
             }
-            Section{
+            Section {
                 NavigationLink {
                     
                 } label: {
@@ -103,7 +102,7 @@ struct SettingsView: View {
                 }
             }
             Section{
-                Button(role: .destructive) {
+                Button {
                     
                 } label: {
                     Text("Log out")

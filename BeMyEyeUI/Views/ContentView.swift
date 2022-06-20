@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    
     var body: some View {
         TabView{
             NavigationView{
@@ -18,14 +17,14 @@ struct ContentView: View {
                 Image(systemName: "house")
                 Text("Home")
             }
-            NavigationView{
+            NavigationView {
                 CommunityView()
             }
             .tabItem{
                 Image(systemName: "person.3")
                 Text("Community")
             }
-            NavigationView{
+            NavigationView {
                 SettingsView()
             }
             .tabItem{
