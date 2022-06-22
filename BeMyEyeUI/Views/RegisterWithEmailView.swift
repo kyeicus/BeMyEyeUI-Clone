@@ -18,21 +18,22 @@ struct RegisterWithEmailView: View {
                 .bold()
                 .font(.largeTitle)
                 .padding()
-            HStack{
+            
+            HStack(alignment: .top){
                 VStack(alignment: .leading){
                     Text("First Name")
-                    TextField(" sf", text: $firstName)
+                    TextField("", text: $firstName)
                         .textFieldStyle(.roundedBorder)
                 }
                 VStack(alignment: .leading) {
                     Text("Last Name")
-                    TextField(" sda", text: $lastName)
+                    TextField("", text: $lastName)
                         .textFieldStyle(.roundedBorder)
                 }
             }
             VStack(alignment: .leading){
                 Text("Email")
-                TextField(" sf", text: $email)
+                TextField("", text: $email)
                     .textFieldStyle(.roundedBorder)
                     .textInputAutocapitalization(.never)
                     .disableAutocorrection(true)
@@ -42,8 +43,9 @@ struct RegisterWithEmailView: View {
                 Text("Password")
                 Text("Min. 6 characters")
                     .font(.caption)
-                SecureField(" sda", text: $password)
+                SecureField("", text: $password)
                     .textFieldStyle(.roundedBorder)
+                
             }
             
             Button {
@@ -53,7 +55,7 @@ struct RegisterWithEmailView: View {
                     .foregroundColor(.white)
                     .frame(width: 360, height: 50, alignment: .center)
                     .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill())
-            }
+            } .disabled(email.hasPrefix("@") || firstName.isEmpty || lastName.isEmpty || password.count < 6)
             Text("Already a user?")
             NavigationLink {
                 RegisterWithEmailView()
@@ -61,7 +63,8 @@ struct RegisterWithEmailView: View {
                 Text("Sign In")
                     .foregroundColor(.white)
                     .frame(width: 360, height: 50, alignment: .center)
-                    .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill())
+                    .background(RoundedRectangle(cornerRadius: 10, style: .continuous).fill(Color.gray))
+                
             }
             Spacer()
         }

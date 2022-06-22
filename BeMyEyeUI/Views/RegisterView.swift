@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RegisterView: View {
     var body: some View {
+        
         VStack(alignment: .center, spacing:  10){
             Text("Get started")
                 .bold()
